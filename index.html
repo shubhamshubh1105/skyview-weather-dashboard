@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkyView — Weather Dashboard</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated background layers -->
+  <div class="bg-aurora"></div>
+  <div class="particles" id="particles"></div>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <div class="logo">Sky<span>View</span></div>
+      <div id="datetime"></div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-wrap">
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search city... (e.g. Mumbai, London, Tokyo)"
+        />
+        <button class="search-btn" onclick="fetchWeather()">Search</button>
+      </div>
+      <div class="error-msg" id="errorMsg">⚠️ City not found. Please try again.</div>
+    </div>
+
+    <!-- Loader spinner -->
+    <div class="loader" id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Weather content renders here -->
+    <div id="weatherContent">
+      <div class="placeholder" id="placeholder">
+        <div class="placeholder-icon">🌍</div>
+        <h2>Search any city to begin</h2>
+        <p>Get real-time weather, forecasts & more</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="app.js"></script>
+
+</body>
+</html>
